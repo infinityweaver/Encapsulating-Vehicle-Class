@@ -3,42 +3,39 @@ public class Vehicle
 	private double load;
 	private double maxLoad;
 
-
 	public Vehicle(double maxLoad)
 	{
-		this.maxLoad = maxLoad;
+		this.maxLoad = this.kiloToNewts(maxLoad);
 	}
 
 	public double getLoad()
 	{
-		return this.load;
+		return this.newtsToKilo(load);
 	}
 
 	public double getMaxLoad()
 	{
-		return this.maxLoad;
-	}
-
-	private double kiloToNewts(double weight)
-	{
-		return (weight * 9.8);
-	}
-
-	private double newtsToKilo(double weight)
-	{
-		return (weight / 9.8);
+		return this.newtsToKilo(maxLoad);
 	}
 
 	public boolean addBox(double weight)
 	{
-		if ((weight+load) < maxLoad)
+		if((this.kiloToNewts(weight) + load) < maxLoad)
 		{
-			this.load += weight;
+			load = load + this.kiloToNewts(weight);
 			return true;
 		}
-		else
+		else 
 		{
 			return false;
 		}
 	}
-}
+	private double kiloToNewts (double weight) 
+	{
+		return (weight * 9.8);
+	}
+	private double newtsToKilo (double weight) 
+	{
+		return (weight / 9.8);
+	}
+} 
