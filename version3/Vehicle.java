@@ -5,20 +5,20 @@ public class Vehicle{
 
 	public Vehicle(double maxLoad)
 	{
-		this.maxLoad = maxLoad;
+		this.maxLoad = this.kiloToNewts(maxLoad);
 	}
 
 	public double getLoad(){
-		return this.load;
+		return this.newtsToKilo(load);
 	}
 
 	public double getmaxLoad(){
-		return this.maxLoad;
+		return this.newtsToKilo(maxLoad);
 	}
 
 	public boolean addBox(double weight){
-		if ((weight+load) < maxLoad) {
-			load = load + weight;
+		if ((this.kiloToNewts(weight)+load) < maxLoad) {
+			load = load + this.kiloToNewts(weight);
 			return true;		
 		} else {
 			return false;
