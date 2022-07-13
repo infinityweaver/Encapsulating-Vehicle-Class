@@ -33,8 +33,7 @@ public class Vehicle
 		
 	}
 
-}
-private double kiloToNewts(double weight)
+	private double kiloToNewts(double weight)
 	{
 		return (weight * 9.8);
 	}
@@ -43,4 +42,5 @@ private double kiloToNewts(double weight)
 	{
 		return (weight / 9.8);
 	}
-}	
+}
+
