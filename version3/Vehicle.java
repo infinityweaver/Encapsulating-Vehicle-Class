@@ -26,11 +26,11 @@ public class Vehicle{
 	}
 
 	private double newtsToKilo (double weight){
-		return (weight * 9.8);
+		return (weight / 9.8);
 	}
 
 	private double kiloToNewts (double weight){
-		return (weight / 9.8);
+		return (weight * 9.8);
 	}
 
 
