@@ -11,19 +11,19 @@ public class Vehicle
 
 		public double getLoad()
 		{
-			return this.load;
+			return newtsToKilo(this.load);
 		}
 
 		public double getMaxLoad()
 		{
-			return this.maxLoad;
+			return newtsToKilo(this.maxLoad);
 		}
 
 		public boolean addBox(double weight)
 		{
-			if((load + weight) <= this.maxLoad)
+			if((load + kiloToNewts(weight) <= this.maxLoad)
 			{
-				this.load += weight;
+				this.load += kiloToNewts(weight);
 				return true;
 			}
 			else return false;
