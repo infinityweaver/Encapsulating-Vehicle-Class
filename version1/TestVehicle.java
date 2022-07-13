@@ -1,5 +1,6 @@
 public class TestVehicle {
-  public static void main(String[] args) {
+  public static void main(String[] args) 
+  {
 
     // Create a vehicle that can handle 10,000 kilograms weight
     System.out.println("Creating a vehicle with a 10,000kg maximum load.");
